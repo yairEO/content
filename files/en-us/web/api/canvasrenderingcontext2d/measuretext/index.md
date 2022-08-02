@@ -43,11 +43,12 @@ Given this {{HTMLElement("canvas")}} element:
 … you can get a {{domxref("TextMetrics")}} object using the following code:
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
+ctx.font = 'normal 400 1px Arial';
 
 let text = ctx.measureText('Hello world');
-console.log(text.width);  // 56;
+console.log(text.width);  // ~5;
 ```
 
 ## Specifications
